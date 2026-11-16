@@ -1,0 +1,11 @@
+{
+  "app": "uv run app.py",
+  "context": {
+    "config": {
+      "tokenMinutes": 60,
+      "idleSeconds": 600,
+      "suspendedSeconds": 3600,
+      "maxLifetimeSeconds": 14400
+    }
+  }
+}

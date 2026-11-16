@@ -1,0 +1,14 @@
+[project]
+name = "sample-lambda-microvm-per-user-sessions"
+version = "1.0.0"
+description = "Per-user VS Code in the browser on AWS Lambda MicroVMs"
+license = "MIT-0"
+requires-python = ">=3.10"
+dependencies = [
+    "aws-cdk-lib==2.270.0",
+    "constructs>=10.0.0,<11.0.0",
+]
+
+[tool.uv]
+# Sample code, not a library: never build or publish this as a package.
+package = false

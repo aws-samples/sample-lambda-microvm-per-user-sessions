@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Build artifacts
+*.zip
+build/
+dist/
+
+# Local env / secrets - never commit
+.env
+*.pem
+*.token
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# CDK
+cdk.out/
+cdk.context.json
+frontend/config.js

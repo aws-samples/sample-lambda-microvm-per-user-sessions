@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved. -->
+<!-- SPDX-License-Identifier: MIT-0 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your own VS Code on Lambda MicroVMs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Your own VS Code on Lambda MicroVMs</h1>
+    <section id="signed-out" data-view hidden>
+      <span>Sign in to get a private VS Code that only you can reach.</span>
+      <button id="sign-in">Sign in</button>
+    </section>
+    <section id="signed-in" data-view hidden>
+      <span><strong id="user"></strong> · <span id="status">ready</span></span>
+      <span>
+        <button id="start">Open VS Code</button>
+        <button id="stop" class="secondary">Terminate</button>
+        <button id="sign-out" class="secondary">Sign out</button>
+      </span>
+    </section>
+  </header>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

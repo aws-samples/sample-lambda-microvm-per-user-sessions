@@ -1,0 +1,47 @@
+This sample does not vendor third-party code in the repository. Building and
+deploying it downloads the components listed below. Each is used under its own
+license; review the license terms before use.
+
+** openvscode-server v1.109.5 - https://github.com/gitpod-io/openvscode-server
+   Downloaded during the MicroVM image build (microvm/Dockerfile), pinned by SHA-256.
+   License: MIT - https://github.com/gitpod-io/openvscode-server/blob/main/LICENSE.txt
+
+** AWS Lambda MicroVMs base image public.ecr.aws/lambda/microvms:al2023-minimal
+   Used as the MicroVM image base (microvm/Dockerfile).
+   License: see the image and Amazon Linux 2023 package licenses.
+
+** git, python3, tar, gzip, shadow-utils, hostname, procps-ng, which, less
+   Installed from the Amazon Linux 2023 package repositories (microvm/Dockerfile).
+   License: various, per package (see `dnf info <package>` in the image).
+
+** aws-cdk-lib - https://github.com/aws/aws-cdk
+   Python dependency (pyproject.toml, pinned in uv.lock).
+   License: Apache-2.0 - https://github.com/aws/aws-cdk/blob/main/LICENSE
+
+** constructs - https://github.com/aws/constructs
+   Python dependency (pyproject.toml, pinned in uv.lock).
+   License: Apache-2.0 - https://github.com/aws/constructs/blob/10.x/LICENSE
+
+** Transitive Python dependencies of aws-cdk-lib and constructs
+   Installed by `uv sync` (pinned in uv.lock).
+   - jsii, aws-cdk.asset-awscli-v1, aws-cdk.asset-node-proxy-agent-v6,
+     aws-cdk.cloud-assembly-schema - License: Apache-2.0 - https://github.com/aws/jsii, https://github.com/cdklabs
+   - tzdata - License: Apache-2.0 - https://github.com/python/tzdata
+   - attrs, cattrs - License: MIT - https://github.com/python-attrs
+   - publication - License: MIT - https://github.com/glyph/publication
+   - typeguard - License: MIT - https://github.com/agronholm/typeguard
+   - python-dateutil - License: BSD-3-Clause (dual Apache-2.0) - https://github.com/dateutil/dateutil
+   - typing_extensions - License: PSF-2.0 - https://github.com/python/typing_extensions
+   - six - License: MIT - https://github.com/benjaminp/six
+   - exceptiongroup (Python 3.10 only) - License: MIT - https://github.com/agronholm/exceptiongroup
+
+** AWS CDK CLI (aws-cdk, npm) - https://github.com/aws/aws-cdk-cli
+   Used to deploy the stack.
+   License: Apache-2.0 - https://github.com/aws/aws-cdk-cli/blob/main/LICENSE
+
+** boto3 / botocore - https://github.com/boto/boto3
+   Provided by the AWS Lambda Python runtime for the session function; not installed by this sample.
+   License: Apache-2.0 - https://github.com/boto/boto3/blob/develop/LICENSE
+
+VS Code extensions that users install inside their MicroVM come from the
+Open VSX registry under their own licenses.
